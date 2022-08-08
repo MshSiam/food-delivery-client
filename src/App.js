@@ -9,6 +9,7 @@ import { useStateValue } from "./context/StateProvider"
 import { getAllFoodItems } from "./utilities/firebaseFunctions"
 import { useEffect } from "react"
 import { actionType } from "./context/reducer"
+import Footer from "./components/Footer"
 
 function App() {
   const [{}, dispatch] = useStateValue()
@@ -38,6 +39,7 @@ function App() {
             <Route path="/createItem" element={<CreateContainer />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </AnimatePresence>
   )
