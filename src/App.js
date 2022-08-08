@@ -5,8 +5,28 @@ import { Route, Routes } from "react-router-dom"
 import { AnimatePresence } from "framer-motion"
 import MainContainer from "./components/MainContainer"
 import CreateContainer from "./components/CreateContainer"
+import { useStateValue } from "./context/StateProvider"
+import { getAllFoodItems } from "./utilities/firebaseFunctions"
+import { useEffect } from "react"
+import { actionType } from "./context/reducer"
 
 function App() {
+  const [{}, dispatch] = useStateValue()
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      console.log(data)
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems: data
+      })
+    })
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <AnimatePresence exitBeforeEnter>
       <div className="w-screen h-auto flex flex-col bg-primary">
