@@ -7,11 +7,11 @@ This is full-stack web application using react js, frammer motion, firebase , fi
 
 ## Features
 
-- Fully Responsive  
+- This website is fully Responsive for desktop, tablet and mobile devices.  
 - User can filter product by categories. 
 - User can login / signup using google. 
 - Any user add products to his cart.
-- User can see his cart details and order.
+- User can increase, decrease or delete products from the cart.
 - Admin can add product.
 
 
