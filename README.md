@@ -1,7 +1,7 @@
 
 # Hot Onion
 
-This is front-end web application using react js, frammer motion, firebase , firestore.
+This is full-stack web application using react js, frammer motion, firebase , firestore.
 
 
 
@@ -9,8 +9,10 @@ This is front-end web application using react js, frammer motion, firebase , fir
 
 - Fully Responsive  
 - User can filter product by categories. 
-- Any user add products to his cart don't need to login / signup.
+- User can login / signup using google. 
+- Any user add products to his cart.
 - User can see his cart details and order.
+- Admin can add product.
 
 
 
